@@ -25,10 +25,11 @@ int main(){
 	Text txt;
 	Text txt2;
 	Texture texture;
+	int size = 25;
 	
 
 	// cretaion d'un cercle
-	CircleShape circle(25);
+	CircleShape circle(size);
 	circle.setFillColor(Color::White);
 	circle.setOutlineColor(Color::Yellow);
 	circle.setOutlineThickness(5);
@@ -109,6 +110,21 @@ int main(){
 				circle.setPosition(posx, posy);
 				window.clear(Color::Black);
 				window.draw(txt);
+				window.draw(circle);
+			}
+
+			if (event.type == Event::KeyPressed) {
+				if (event.key.code == Keyboard::Add)
+					size += 2;
+					circle.setRadius(size);
+					circle.setPosition(posx, posy);
+					window.draw(circle);
+			}
+			if (event.type == Event::KeyPressed) {
+				if (event.key.code == Keyboard::M)
+					size -= 2;
+				circle.setRadius(size);
+				circle.setPosition(posx, posy);
 				window.draw(circle);
 			}
 			
