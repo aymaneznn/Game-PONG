@@ -45,8 +45,8 @@ int main(){
 	// creation d'un rectangle
 
 	RectangleShape rectangle(Vector2f(40.f,150.f));
-	rectangle.setFillColor(Color::White);
-	rectangle.setOutlineColor(Color::Blue);
+	rectangle.setFillColor(Color::Red);
+	rectangle.setOutlineColor(Color::White);
 	rectangle.setOutlineThickness(5);
 	rectangle.setPosition(raquettePosX, raquettePosY);
 
